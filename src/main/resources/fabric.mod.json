@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "colored-tools",
+	"version": "${version}",
+	"name": "Colored Tools",
+	"description": "A mod that adds color variants to wooden tools depending on wood type.",
+	"authors": [
+		"Bunmuppet"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/colored-tools/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.bunmuppet.coloredtools.ColoredTools"
+		],
+		"client": [
+			"net.bunmuppet.coloredtools.ColoredToolsClient"
+		],
+		"fabric-datagen": [
+			"net.bunmuppet.coloredtools.ColoredToolsDataGenerator"
+		]
+	},
+	"mixins": [
+		"colored-tools.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.19.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
