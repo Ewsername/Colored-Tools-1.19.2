@@ -1,5 +1,6 @@
 package net.bunmuppet.coloredtools;
 
+import net.bunmuppet.coloredtools.item.Moditems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,6 +12,7 @@ public class ColoredTools implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+
+		Moditems.registerModItems();
 	}
 }
