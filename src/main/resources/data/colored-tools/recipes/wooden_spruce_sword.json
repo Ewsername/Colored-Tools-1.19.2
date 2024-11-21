@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "minecraft:spruce_planks"
+    }
+  },
+  "pattern": [
+    " X ",
+    " X ",
+    " # "
+  ],
+  "result": {
+    "item": "colored-tools:wooden_spruce_sword"
+  }
+}

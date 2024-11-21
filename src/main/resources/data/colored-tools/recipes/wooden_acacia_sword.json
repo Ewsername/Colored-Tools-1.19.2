@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "minecraft:acacia_planks"
+    }
+  },
+  "pattern": [
+    " X ",
+    " X ",
+    " # "
+  ],
+  "result": {
+    "item": "colored-tools:wooden_acacia_sword"
+  }
+}
