@@ -29,7 +29,7 @@
 		"colored-tools.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.16.9",
+		"fabricloader": ">=0.16.7",
 		"minecraft": "~1.19.2",
 		"java": ">=17",
 		"fabric-api": "*"
