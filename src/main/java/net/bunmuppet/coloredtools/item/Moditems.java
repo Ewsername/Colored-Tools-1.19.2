@@ -6,7 +6,7 @@ import net.minecraft.util.registry.Registry;
 
 public class Moditems {
 
-    //WOODEN HANDLE
+    //WOODEN HANDLE STATISTICS
     public static final Item WOODEN_HANDLE = registerTool("wooden_handle");
 
     //HANDLE LOGIC
