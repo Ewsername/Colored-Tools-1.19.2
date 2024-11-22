@@ -2,16 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "minecraft:stick"
+      "item": "minecraft:dark_oak_planks"
     },
     "X": {
-      "item": "minecraft:dark_oak_planks"
+      "item": "colored-tools:wooden_handle"
     }
   },
   "pattern": [
-    " X ",
-    " X ",
-    " # "
+    " #",
+    "X "
   ],
   "result": {
     "item": "colored-tools:wooden_dark_oak_sword"

@@ -1,12 +1,22 @@
 package net.bunmuppet.coloredtools.item;
 
-import net.bunmuppet.coloredtools.ColoredTools;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class Moditems {
+
+    //WOODEN HANDLE
+    public static final Item WOODEN_HANDLE = registerTool("wooden_handle");
+
+    //HANDLE LOGIC
+    public static Item registerTool(String name){
+        return Registry.register(
+                Registry.ITEM,
+                new Identifier("colored-tools", name),
+                new Item(new Item.Settings().group(ItemGroup.TOOLS))
+        );
+    }
 
     //SWORD STATISTICS
     public static final Item WOODEN_BIRCH_SWORD = registerSword("wooden_birch_sword",

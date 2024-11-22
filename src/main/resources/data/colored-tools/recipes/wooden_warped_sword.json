@@ -2,16 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "minecraft:stick"
+      "item": "minecraft:warped_planks"
     },
     "X": {
-      "item": "minecraft:warped_planks"
+      "item": "colored-tools:wooden_handle"
     }
   },
   "pattern": [
-    " X ",
-    " X ",
-    " # "
+    " #",
+    "X "
   ],
   "result": {
     "item": "colored-tools:wooden_warped_sword"

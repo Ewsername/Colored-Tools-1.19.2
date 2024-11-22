@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:mangrove_planks"
+    },
+    "S": {
+      "item": "minecraft:mangrove_slab"
+    },
+    "X": {
+      "item": "colored-tools:wooden_handle"
+    }
+  },
+  "pattern": [
+    "##S",
+    " X "
+  ],
+  "result": {
+    "item": "colored-tools:wooden_mangrove_pickaxe"
+  }
+}

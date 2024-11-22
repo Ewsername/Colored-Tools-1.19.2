@@ -3,7 +3,7 @@
 	"id": "colored-tools",
 	"version": "${version}",
 	"name": "Colored Tools",
-	"description": "A mod that adds color variants to wooden tools depending on wood type.",
+	"description": "A simple mod that adds color variants to wooden tools depending on wood type.",
 	"authors": [
 		"Bunmuppet"
 	],

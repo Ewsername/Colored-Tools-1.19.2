@@ -2,16 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "minecraft:stick"
+      "item": "minecraft:birch_planks"
     },
     "X": {
-      "item": "minecraft:birch_planks"
+      "item": "colored-tools:wooden_handle"
     }
   },
   "pattern": [
-    " X ",
-    " X ",
-    " # "
+    " #",
+    "X "
   ],
   "result": {
     "item": "colored-tools:wooden_birch_sword"

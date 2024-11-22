@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:birch_planks"
+    },
+    "S": {
+      "item": "minecraft:birch_slab"
+    },
+    "X": {
+      "item": "colored-tools:wooden_handle"
+    }
+  },
+  "pattern": [
+    "##S",
+    " X "
+  ],
+  "result": {
+    "item": "colored-tools:wooden_birch_pickaxe"
+  }
+}
