@@ -154,7 +154,7 @@ public class Moditems {
     }
 
     public static void registerModItems() {
-        System.out.println("Registering Mod Items for Colored Tools");
+        System.out.println("Registering Mod Items for Colored Wooden Tools");
         // This method is a placeholder. Actual registration logic happens as static initializers.
     }
 

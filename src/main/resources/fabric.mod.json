@@ -2,14 +2,14 @@
 	"schemaVersion": 1,
 	"id": "colored-tools",
 	"version": "${version}",
-	"name": "Colored Tools",
+	"name": "Colored Wooden Tools",
 	"description": "A simple mod that adds color variants to wooden tools depending on wood type.",
 	"authors": [
 		"Bunmuppet"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://www.curseforge.com/members/bunmuppet/projects",
+		"sources": "https://github.com/Ewsername/Colored-Tools-1.19.2"
 	},
 	"license": "MIT",
 	"icon": "assets/colored-tools/icon.png",
