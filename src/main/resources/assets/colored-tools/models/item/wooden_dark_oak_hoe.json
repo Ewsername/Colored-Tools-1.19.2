@@ -2,17 +2,5 @@
   "parent": "item/handheld",
   "textures": {
     "layer0": "colored-tools:item/wooden_dark_oak_hoe"
-  },
-  "transform": {
-    "thirdperson_right": {
-      "rotation": [0, 0, 0],
-      "translation": [0, 0, 0],
-      "scale": [1, 1, 1]
-    },
-    "thirdperson_left": {
-      "rotation": [0, 0, 0],
-      "translation": [0, 0, 0],
-      "scale": [1, 1, 1]
-    }
   }
 }
