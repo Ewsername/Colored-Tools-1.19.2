@@ -12,7 +12,7 @@
 		"sources": "https://github.com/Ewsername/Colored-Tools-1.19.2"
 	},
 	"license": "MIT",
-	"icon": "assets/colored-tools/icon.png",
+	"icon": "assets/colored-tools/icon.png", 
 	"environment": "*",
 	"entrypoints": {
 		"main": [
