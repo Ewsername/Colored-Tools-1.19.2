@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "P": {
+      "item": "minecraft:dark_oak_planks"
+    },
+    "X": {
+      "item": "colored-tools:wooden_handle"
+    }
+  },
+  "pattern": [
+    "P  ",
+    " X "
+  ],
+  "result": {
+    "item": "colored-tools:wooden_dark_oak_sword"
+  }
+}

@@ -22,7 +22,7 @@
 			"net.bunmuppet.coloredtools.ColoredToolsClient"
 		],
 		"fabric-datagen": [
-			"net.bunmuppet.coloredtools.ColoredToolsDataGenerator"
+			"net.bunmuppet.coloredtools.datagen.ModDataGeneration"
 		]
 	},
 	"mixins": [
