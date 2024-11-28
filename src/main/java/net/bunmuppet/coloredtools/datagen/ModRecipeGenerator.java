@@ -1,15 +1,14 @@
 package net.bunmuppet.coloredtools.datagen;
 
 import net.bunmuppet.coloredtools.item.Moditems;
-import net.bunmuppet.coloredtools.tags.ModItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.RecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
-import net.minecraft.item.Item;
 import net.minecraft.item.Items;
-import net.minecraft.tag.ItemTags;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.util.Identifier;
 
 import java.util.function.Consumer;
@@ -30,13 +29,14 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('P', Items.ACACIA_PLANKS)
                 .input('S', Items.ACACIA_SLAB)
                 .input('X', Moditems.WOODEN_HANDLE)
-                .criterion(RecipeProvider.hasItem(Items.ACACIA_PLANKS),
-                        RecipeProvider.conditionsFromItem(Items.ACACIA_PLANKS))
-                .criterion(RecipeProvider.hasItem(Items.ACACIA_SLAB),
-                        RecipeProvider.conditionsFromItem(Items.ACACIA_SLAB))
-                .criterion(RecipeProvider.hasItem(Moditems.WOODEN_HANDLE),
-                        RecipeProvider.conditionsFromItem(Moditems.WOODEN_HANDLE))
-                .offerTo(consumer, new Identifier(RecipeProvider.getRecipeName(Moditems.WOODEN_ACACIA_AXE)));
+                .criterion(hasItem(Items.ACACIA_PLANKS),
+                        conditionsFromItem(Items.ACACIA_PLANKS))
+                .criterion(hasItem(Items.ACACIA_SLAB),
+                        conditionsFromItem(Items.ACACIA_SLAB))
+                .criterion(hasItem(Moditems.WOODEN_HANDLE),
+                        conditionsFromItem(Moditems.WOODEN_HANDLE))
+                .offerTo(consumer, new Identifier(Registry.ITEM.getId(Moditems.WOODEN_ACACIA_AXE).getNamespace(),
+                        "wooden_acacia_axe"));
 
         ShapedRecipeJsonBuilder.create(Moditems.WOODEN_ACACIA_HOE)
                 .pattern("SP ")

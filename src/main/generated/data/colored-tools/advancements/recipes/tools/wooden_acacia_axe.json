@@ -27,7 +27,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:wooden_acacia_axe"
+        "recipe": "colored-tools:wooden_acacia_axe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -54,7 +54,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:wooden_acacia_axe"
+      "colored-tools:wooden_acacia_axe"
     ]
   }
 }

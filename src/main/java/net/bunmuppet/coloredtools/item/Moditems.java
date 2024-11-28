@@ -1,10 +1,27 @@
 package net.bunmuppet.coloredtools.item;
 
 import net.minecraft.item.*;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.util.Identifier;
 
 public class Moditems {
+
+    //MISC ITEMS
+
+    //EVIL WORM - What is this!?
+    public static final Item EVIL_WORM = registerItem("evil_worm" );
+
+    //MISC ITEMS LOGIC
+    public static Item registerItem(String name){
+        return Registry.register(
+                Registry.ITEM,
+                new Identifier("colored-tools", name),
+                new Item(new Item.Settings().group(ItemGroup.MISC))
+        );
+    }
+
+    //BAMBOO STATISTICS
+    //LOGIC
 
     //WOODEN HANDLE STATISTICS
     public static final Item WOODEN_HANDLE = registerTool("wooden_handle");
