@@ -1,11 +1,13 @@
 package net.bunmuppet.coloredtools.datagen;
 
+import jdk.jfr.Category;
 import net.bunmuppet.coloredtools.item.Moditems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.RecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -20,6 +22,127 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
     @Override
     protected void generateRecipes(Consumer<RecipeJsonProvider> consumer) {
+
+        //BAMBOO SPECIAL ITEMS RECIPES ---------------------------------------------------------------------------
+
+        ShapelessRecipeJsonBuilder.create(Moditems.BAMBOO_SHANK)
+                .input(Items.BAMBOO)
+                .input(Items.FLINT)
+                .criterion(hasItem(Items.BAMBOO),
+                        conditionsFromItem(Items.BAMBOO))
+                .criterion(hasItem(Items.FLINT),
+                        conditionsFromItem(Items.FLINT))
+                .offerTo(consumer, new Identifier(getRecipeName(Moditems.BAMBOO_SHANK)));
+
+        ShapelessRecipeJsonBuilder.create(Moditems.BAMBOO_STALK, 2)
+                .input(Moditems.BAMBOO_BUNDLE)
+                .input(Moditems.BAMBOO_SHANK)
+                .criterion(hasItem(Items.BAMBOO),
+                        conditionsFromItem(Items.BAMBOO))
+                .criterion(hasItem(Moditems.BAMBOO_SHANK),
+                        conditionsFromItem(Moditems.BAMBOO_SHANK))
+                .offerTo(consumer, new Identifier(getRecipeName(Moditems.BAMBOO_STALK)));
+
+        ShapelessRecipeJsonBuilder.create(Moditems.BAMBOO_STRIPPED_STALK, 2)
+                .input(Moditems.BAMBOO_STALK)
+                .input(Moditems.BAMBOO_SHANK)
+                .criterion(hasItem(Moditems.BAMBOO_STALK),
+                        conditionsFromItem(Moditems.BAMBOO_STALK))
+                .criterion(hasItem(Moditems.BAMBOO_SHANK),
+                        conditionsFromItem(Moditems.BAMBOO_SHANK))
+                .offerTo(consumer, new Identifier(getRecipeName(Moditems.BAMBOO_STRIPPED_STALK)));
+
+        ShapedRecipeJsonBuilder.create(Moditems.BAMBOO_BUNDLE)
+                .pattern("BBB")
+                .pattern("BZB")
+                .pattern("BBB")
+                .input('B', Items.BAMBOO)
+                .input('Z', Items.STRING)
+                .criterion(hasItem(Items.BAMBOO),
+                        conditionsFromItem(Items.BAMBOO))
+                .criterion(hasItem(Items.STRING),
+                        conditionsFromItem(Items.STRING))
+                .offerTo(consumer, new Identifier(getRecipeName(Moditems.BAMBOO_BUNDLE)));
+
+        //MISC BAMBOO
+        ShapelessRecipeJsonBuilder.create(Items.CARVED_PUMPKIN)
+                .input(Items.PUMPKIN)
+                .input(Moditems.BAMBOO_SHANK)
+                .criterion(hasItem(Items.PUMPKIN),
+                        conditionsFromItem(Items.PUMPKIN))
+                .criterion(hasItem(Moditems.BAMBOO_SHANK),
+                        conditionsFromItem(Moditems.BAMBOO_SHANK))
+                .offerTo(consumer, new Identifier(getRecipeName(Items.CARVED_PUMPKIN)));
+
+        ShapelessRecipeJsonBuilder.create(Items.STRING)
+                .input(Items.BAMBOO)
+                .input(Moditems.BAMBOO_SHANK)
+                .criterion(hasItem(Items.BAMBOO),
+                        conditionsFromItem(Items.BAMBOO))
+                .criterion(hasItem(Moditems.BAMBOO_SHANK),
+                        conditionsFromItem(Moditems.BAMBOO_SHANK))
+                .offerTo(consumer, new Identifier(getRecipeName(Items.STRING)));
+
+        //BAMBOO TOOLS RECIPES -----------------------------------------------------------------------------------
+        ShapedRecipeJsonBuilder.create(Moditems.BAMBOO_STALK_AXE)
+                .pattern("XR ")
+                .pattern("XR ")
+                .pattern(" R ")
+                .input('R', Moditems.BAMBOO_STALK)
+                .input('X', Moditems.BAMBOO_STRIPPED_STALK)
+                .criterion(hasItem(Moditems.BAMBOO_STALK),
+                        conditionsFromItem(Moditems.BAMBOO_STALK))
+                .criterion(hasItem(Moditems.BAMBOO_STRIPPED_STALK),
+                        conditionsFromItem(Moditems.BAMBOO_STRIPPED_STALK))
+                .offerTo(consumer, new Identifier(getRecipeName(Moditems.BAMBOO_STALK_AXE)));
+
+        ShapedRecipeJsonBuilder.create(Moditems.BAMBOO_STALK_HOE)
+                .pattern("XX ")
+                .pattern(" R ")
+                .pattern(" R ")
+                .input('R', Moditems.BAMBOO_STALK)
+                .input('X', Moditems.BAMBOO_STRIPPED_STALK)
+                .criterion(hasItem(Moditems.BAMBOO_STALK),
+                        conditionsFromItem(Moditems.BAMBOO_STALK))
+                .criterion(hasItem(Moditems.BAMBOO_STRIPPED_STALK),
+                        conditionsFromItem(Moditems.BAMBOO_STRIPPED_STALK))
+                .offerTo(consumer, new Identifier(getRecipeName(Moditems.BAMBOO_STALK_HOE)));
+
+        ShapedRecipeJsonBuilder.create(Moditems.BAMBOO_STALK_PICKAXE)
+                .pattern("XRX")
+                .pattern(" R ")
+                .pattern(" R ")
+                .input('R', Moditems.BAMBOO_STALK)
+                .input('X', Moditems.BAMBOO_STRIPPED_STALK)
+                .criterion(hasItem(Moditems.BAMBOO_STALK),
+                        conditionsFromItem(Moditems.BAMBOO_STALK))
+                .criterion(hasItem(Moditems.BAMBOO_STRIPPED_STALK),
+                        conditionsFromItem(Moditems.BAMBOO_STRIPPED_STALK))
+                .offerTo(consumer, new Identifier(getRecipeName(Moditems.BAMBOO_STALK_PICKAXE)));
+
+        ShapedRecipeJsonBuilder.create(Moditems.BAMBOO_STALK_SHOVEL)
+                .pattern(" XX")
+                .pattern(" R ")
+                .pattern("   ")
+                .input('R', Moditems.BAMBOO_STALK)
+                .input('X', Moditems.BAMBOO_STRIPPED_STALK)
+                .criterion(hasItem(Moditems.BAMBOO_STALK),
+                        conditionsFromItem(Moditems.BAMBOO_STALK))
+                .criterion(hasItem(Moditems.BAMBOO_STRIPPED_STALK),
+                        conditionsFromItem(Moditems.BAMBOO_STRIPPED_STALK))
+                .offerTo(consumer, new Identifier(getRecipeName(Moditems.BAMBOO_STALK_SHOVEL)));
+
+        ShapedRecipeJsonBuilder.create(Moditems.BAMBOO_STALK_SWORD)
+                .pattern(" X ")
+                .pattern(" R ")
+                .pattern(" R ")
+                .input('R', Moditems.BAMBOO_STALK)
+                .input('X', Moditems.BAMBOO_STRIPPED_STALK)
+                .criterion(hasItem(Moditems.BAMBOO_STALK),
+                        conditionsFromItem(Moditems.BAMBOO_STALK))
+                .criterion(hasItem(Moditems.BAMBOO_STRIPPED_STALK),
+                        conditionsFromItem(Moditems.BAMBOO_STRIPPED_STALK))
+                .offerTo(consumer, new Identifier(getRecipeName(Moditems.BAMBOO_STALK_SWORD)));
 
         //ACACIA TOOLS RECIPES -----------------------------------------------------------------------------------
         ShapedRecipeJsonBuilder.create(Moditems.WOODEN_ACACIA_AXE)

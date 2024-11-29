@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:pumpkin"
+    },
+    {
+      "item": "colored-tools:bamboo_shank"
+    }
+  ],
+  "result": {
+    "item": "minecraft:carved_pumpkin"
+  }
+}

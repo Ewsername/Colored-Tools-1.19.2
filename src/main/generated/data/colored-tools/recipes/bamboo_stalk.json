@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "colored-tools:bamboo_bundle"
+    },
+    {
+      "item": "colored-tools:bamboo_shank"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "colored-tools:bamboo_stalk"
+  }
+}

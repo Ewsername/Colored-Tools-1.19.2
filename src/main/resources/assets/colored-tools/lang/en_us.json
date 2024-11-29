@@ -1,14 +1,22 @@
 {
 
   "item.colored-tools.wooden_handle": "Wooden Handle",
-  "item.colored-tools.evil_worm": "Evil Worm",
+  "item.colored-tools.bamboo_shank": "Bamboo Shank",
+  "item.colored-tools.bamboo_stalk": "Bamboo Stalk",
+  "item.colored-tools.bamboo_bundle": "Bamboo Bundle",
+  "item.colored-tools.bamboo_stripped_stalk": "Bamboo Stripped Stalk",
+
+  "item.colored-tools.bamboo_stalk_pickaxe": "Bamboo Stalk Pickaxe",
+  "item.colored-tools.bamboo_stalk_sword": "Bamboo Stalk Sword",
+  "item.colored-tools.bamboo_stalk_hoe": "Bamboo Stalk Hoe",
+  "item.colored-tools.bamboo_stalk_axe": "Bamboo Stalk Axe",
+  "item.colored-tools.bamboo_stalk_shovel": "Bamboo Stalk Shovel",
 
   "item.colored-tools.wooden_birch_pickaxe": "Wooden Birch Pickaxe",
   "item.colored-tools.wooden_birch_sword": "Wooden Birch Sword",
   "item.colored-tools.wooden_birch_hoe": "Wooden Birch Hoe",
   "item.colored-tools.wooden_birch_axe": "Wooden Birch Axe",
   "item.colored-tools.wooden_birch_shovel": "Wooden Birch Shovel",
-
 
   "item.colored-tools.wooden_acacia_axe": "Wooden Acacia Axe",
   "item.colored-tools.wooden_acacia_hoe": "Wooden Acacia Hoe",
@@ -56,5 +64,7 @@
   "item.colored-tools.wooden_warped_hoe": "Wooden Warped Hoe",
   "item.colored-tools.wooden_warped_pickaxe": "Wooden Warped Pickaxe",
   "item.colored-tools.wooden_warped_shovel": "Wooden Warped Shovel",
-  "item.colored-tools.wooden_warped_sword": "Wooden Warped Sword"
+  "item.colored-tools.wooden_warped_sword": "Wooden Warped Sword",
+
+  "item.colored-tools.menacing_worm": "Menacing Worm"
 }
